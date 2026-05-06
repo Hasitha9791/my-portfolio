@@ -53,6 +53,9 @@ export default function Hero() {
             <a href="https://github.com/Hasitha9791" target="_blank" rel="noreferrer">
               <FiGithub size={14}/> GitHub Profile
             </a>
+            <a href="https://hasitha.online" target="_blank" rel="noreferrer">
+              <FiExternalLink size={14}/> hasitha.online
+            </a>
             <a href={cv} target="_blank" rel="noreferrer">
               <FiDownload size={14}/> View CV Online
             </a>
