@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import photo from '../assets/profile.jpeg'
 import styles from './Hero.module.css'
 
-const cv = '/Hasitha_Weerasinghe_CV.docx'
+const cv = '/Hasitha_Weerasinghe_CV.pdf'
 
 export default function Hero() {
   return (
@@ -53,10 +53,13 @@ export default function Hero() {
             <a href="https://github.com/Hasitha9791" target="_blank" rel="noreferrer">
               <FiGithub size={14}/> GitHub Profile
             </a>
+            <a href={cv} target="_blank" rel="noreferrer">
+              <FiDownload size={14}/> View CV Online
+            </a>
           </div>
 
           <div className={styles.actions}>
-            <a href={cv} download="Hasitha_Weerasinghe_CV.docx" className="btn btn-primary">
+            <a href={cv} download="Hasitha_Weerasinghe_CV.pdf" className="btn btn-primary">
               <FiDownload /> Download CV
             </a>
             <Link to="contact" smooth duration={500} offset={-70} className="btn btn-outline">
