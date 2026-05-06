@@ -1,0 +1,149 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.6rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(30,111,217,0.22);
+  border-color: rgba(30,111,217,0.45);
+}
+
+.featured {
+  border-color: rgba(56,189,248,0.5);
+  background: var(--bg-card);
+  grid-column: 1 / -1;
+}
+
+/* ── Thumbnail ───────────────────────────────────────────────── */
+.thumb {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.featured .thumb { height: 240px; }
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 1.2rem;
+  transition: transform 0.5s ease;
+  display: block;
+}
+.card:hover .thumbImg { transform: scale(1.06); }
+
+/* Placeholder when no screenshot yet */
+.thumbPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.thumbEmoji { font-size: 3rem; }
+.thumbLabel {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Hover overlay — "Visit Site" */
+.thumbOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,15,30,0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s;
+  backdrop-filter: blur(2px);
+  text-decoration: none;
+}
+.card:hover .thumbOverlay { opacity: 1; }
+
+/* ── Card body ───────────────────────────────────────────────── */
+.body {
+  padding: 1.3rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.extLink {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: color 0.2s;
+  margin-top: 2px;
+}
+.extLink:hover { color: var(--accent); }
+
+.title { font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.35; }
+.featured .title { font-size: 1.1rem; }
+
+.url {
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-family: 'Fira Code', monospace;
+}
+.url:hover { text-decoration: underline; }
+
+.desc {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.3rem; }
+
+.tag {
+  background: rgba(30,111,217,0.1);
+  color: var(--text-muted);
+  border: 1px solid rgba(30,111,217,0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.74rem;
+}
+
+.inProgress {
+  background: rgba(251,191,36,0.12);
+  color: #fbbf24;
+  border-color: rgba(251,191,36,0.3);
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}
