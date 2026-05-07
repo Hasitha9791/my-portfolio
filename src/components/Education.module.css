@@ -53,3 +53,8 @@
 @media (max-width: 768px) {
   .columns { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 480px) {
+  .degree { font-size: 0.9rem; }
+  .school { font-size: 0.82rem; }
+}

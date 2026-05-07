@@ -10,6 +10,7 @@ const projects = [
     linkLabel: 'axentratech.com',
     featured: true,
     screenshot: '/projects/axentratech.png',
+    logoOnly: true,
     placeholderGrad: 'linear-gradient(135deg, #0f2554 0%, #1e6fd9 50%, #38bdf8 100%)',
     tags: ['Founder & CEO', 'Custom Software', 'SaaS', 'Sri Lanka'],
     description:
@@ -41,7 +42,7 @@ const projects = [
     title: 'USA Client Loan Origination System',
     emoji: '🇺🇸',
     screenshot: '/projects/loan-origination.png',
-    placeholderGrad: 'linear-gradient(135deg, #1a0e04 0%, #b45309 60%, #fbbf24 100%)',
+    placeholderGrad: 'linear-gradient(135deg, #1a0e04 0%, #92400e 60%, #d97706 100%)',
     tags: ['Loan Origination', 'USA Compliance', 'Full Stack', 'In Progress'],
     description:
       'Customer onboarding & loan workflow management system aligned with USA client compliance — covering application intake, verification, approval, and disbursement.',
@@ -58,7 +59,7 @@ const projects = [
   {
     title: 'First Micro – SaaS Loan Marketplace',
     emoji: '🏪',
-    // screenshot: '/projects/firstmicro.png',
+    screenshot: '/projects/firstmicro.png',
     placeholderGrad: 'linear-gradient(135deg, #1a0d1a 0%, #9d174d 60%, #f472b6 100%)',
     tags: ['Loan Marketplace', 'SaaS', 'UI/UX', 'BPD'],
     description:
@@ -67,7 +68,7 @@ const projects = [
   {
     title: 'Leasing System Frontend',
     emoji: '🚗',
-    // screenshot: '/projects/leasing.png',
+    screenshot: '/projects/leasing.png',
     placeholderGrad: 'linear-gradient(135deg, #0a1a10 0%, #15803d 60%, #4ade80 100%)',
     tags: ['Leasing', 'Frontend', 'AI-Assisted', 'Fintech'],
     description:
@@ -76,7 +77,7 @@ const projects = [
   {
     title: 'CIM Digital Wallet',
     emoji: '📱',
-    // screenshot: '/projects/cim-wallet.png',
+    screenshot: '/projects/cim-wallet.jfif',
     placeholderGrad: 'linear-gradient(135deg, #0f0a1e 0%, #7c3aed 60%, #c4b5fd 100%)',
     tags: ['Digital Wallet', 'Production Support', 'UAT'],
     description:
@@ -85,11 +86,38 @@ const projects = [
   {
     title: 'RPA Automation Projects',
     emoji: '🤖',
-    // screenshot: '/projects/rpa.png',
+    screenshot: '/projects/rpa.svg',
     placeholderGrad: 'linear-gradient(135deg, #0a1520 0%, #0369a1 60%, #38bdf8 100%)',
     tags: ['RPA', 'Automation', 'LB Finance'],
     description:
       'Developed and monitored RPA automation workflows for SMS notifications, letter generation, employee onboarding/offboarding, and CDM transaction failure handling.',
+  },
+  {
+    title: 'First Micro PLUS Banking System',
+    emoji: '🏦',
+    screenshot: '/projects/firstmicro-plus.png',
+    placeholderGrad: 'linear-gradient(135deg, #0f1a2e 0%, #1d4ed8 60%, #60a5fa 100%)',
+    tags: ['Banking', 'Application Support', 'UAT', 'BPD'],
+    description:
+      'Provided application support, conducted UAT, and performed detailed business process analysis to ensure system stability and operational alignment for the First Micro PLUS Banking System.',
+  },
+  {
+    title: 'Sarvodaya Banking System',
+    emoji: '🌿',
+    screenshot: '/projects/sarvodaya.svg',
+    placeholderGrad: 'linear-gradient(135deg, #0a1a10 0%, #065f46 60%, #34d399 100%)',
+    tags: ['Banking', 'Requirements', 'UAT', 'Implementation'],
+    description:
+      'Engaged in requirement gathering from stakeholders, supported UAT execution, and assisted with system implementation and go-live activities for Sarvodaya Banking System.',
+  },
+  {
+    title: 'Firstmicro NANO Loan Management System',
+    emoji: '💰',
+    screenshot: '/projects/firstmicro-nano.svg',
+    placeholderGrad: 'linear-gradient(135deg, #1a0a00 0%, #c2410c 60%, #fb923c 100%)',
+    tags: ['Loan Management', 'UI/UX', 'User Stories', 'BPD'],
+    description:
+      'Designed UI mockups, wrote user stories, mapped system workflows, and prepared comprehensive Business Process Documents (BPD) for the Firstmicro NANO Loan Management System.',
   },
 ]
 
@@ -122,7 +150,11 @@ export default function Projects() {
                 style={{ background: p.placeholderGrad }}
               >
                 {p.screenshot ? (
-                  <img src={p.screenshot} alt={p.title} className={styles.thumbImg} />
+                  <img
+                    src={p.screenshot}
+                    alt={p.title}
+                    className={p.logoOnly ? styles.thumbImgLogo : styles.thumbImg}
+                  />
                 ) : (
                   <div className={styles.thumbPlaceholder}>
                     <span className={styles.thumbEmoji}>{p.emoji}</span>

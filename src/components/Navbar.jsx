@@ -3,6 +3,7 @@ import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
 import { FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi'
 import logo from '../assets/logo.svg'
+import logoLight from '../assets/logo-light.svg'
 import styles from './Navbar.module.css'
 
 const navLinks = [
@@ -54,7 +55,7 @@ export default function Navbar() {
           transition={{ duration: 0.45, ease: 'easeOut' }}
         >
           <Link to="hero" smooth duration={500} className={styles.logoWrap}>
-            <img src={logo} alt="Hasitha Weerasinghe" className={styles.logo} />
+            <img src={dark ? logo : logoLight} alt="Hasitha Weerasinghe" className={styles.logo} />
           </Link>
         </motion.div>
 

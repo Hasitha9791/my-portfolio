@@ -131,3 +131,19 @@ section { padding: 90px 0; }
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+
+/* ── Global Mobile ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  section { padding: 60px 0; }
+
+  .section-title { font-size: 1.6rem; }
+  .section-subtitle { font-size: 0.9rem; margin-bottom: 2rem; }
+
+  .btn { padding: 10px 20px; font-size: 0.88rem; }
+}
+
+@media (max-width: 480px) {
+  section { padding: 48px 0; }
+  .section-title { font-size: 1.4rem; }
+  .container { width: 94%; }
+}

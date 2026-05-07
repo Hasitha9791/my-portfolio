@@ -128,5 +128,9 @@
 }
 
 @media (max-width: 600px) {
-  .header { flex-direction: column; }
+  .header { flex-direction: column; gap: 0.4rem; }
+  .role { font-size: 0.95rem; }
+  .company { font-size: 0.85rem; }
+  .period { font-size: 0.75rem; }
+  .card { padding: 1rem; }
 }

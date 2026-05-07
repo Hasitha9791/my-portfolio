@@ -35,7 +35,7 @@
 .social:hover { color: var(--accent); transform: translateY(-2px); }
 
 @media (max-width: 600px) {
-  .inner { flex-direction: column; text-align: center; }
-  .links { justify-content: center; }
+  .inner { flex-direction: column; text-align: center; gap: 1.2rem; }
+  .links { justify-content: center; flex-wrap: wrap; gap: 0.8rem; }
   .socials { justify-content: center; }
 }

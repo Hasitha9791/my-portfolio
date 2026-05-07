@@ -29,22 +29,37 @@
 .thumb {
   position: relative;
   width: 100%;
-  height: 190px;
+  height: 200px;
   overflow: hidden;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.featured .thumb { height: 240px; }
+.featured .thumb { height: 260px; }
 
 .thumbImg {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
-  padding: 1.2rem;
+  padding: 1.8rem 2.5rem;
   transition: transform 0.5s ease;
   display: block;
 }
 .card:hover .thumbImg { transform: scale(1.06); }
+
+/* Logo-only alias — same as thumbImg, kept for backward compat */
+.thumbImgLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 1.8rem 2.5rem;
+  transition: transform 0.5s ease;
+  display: block;
+}
+.card:hover .thumbImgLogo { transform: scale(1.06); }
 
 /* Placeholder when no screenshot yet */
 .thumbPlaceholder {
@@ -146,4 +161,6 @@
 
 @media (max-width: 600px) {
   .grid { grid-template-columns: 1fr; }
+  .title { font-size: 0.95rem; }
+  .desc { font-size: 0.82rem; }
 }

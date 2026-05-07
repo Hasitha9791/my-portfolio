@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <rect width="400" height="200" fill="#1a0a00"/>
+  <circle cx="200" cy="75" r="38" fill="#c2410c" opacity="0.3" stroke="#fb923c" stroke-width="2"/>
+  <text x="200" y="88" font-family="Inter,sans-serif" font-weight="900" font-size="28" fill="#fb923c" text-anchor="middle">NANO</text>
+  <text x="200" y="143" font-family="Inter,sans-serif" font-weight="700" font-size="15" fill="#ffffff" text-anchor="middle">Firstmicro NANO</text>
+  <text x="200" y="163" font-family="Inter,sans-serif" font-weight="400" font-size="11" fill="#94a3b8" text-anchor="middle">Loan Management System</text>
+</svg>

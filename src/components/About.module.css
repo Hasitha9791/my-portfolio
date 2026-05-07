@@ -118,4 +118,6 @@
 
 @media (max-width: 480px) {
   .statsRow { grid-template-columns: repeat(2, 1fr); }
+  .statNum { font-size: 1.8rem; }
+  .statLabel { font-size: 0.75rem; }
 }
