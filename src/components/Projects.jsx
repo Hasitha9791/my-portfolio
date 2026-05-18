@@ -111,9 +111,10 @@ const projects = [
       'Engaged in requirement gathering from stakeholders, supported UAT execution, and assisted with system implementation and go-live activities for Sarvodaya Banking System.',
   },
   {
-    title: 'Firstmicro NANO Loan Management System',
+    title: 'FIRSTMICRO lite',
+    logoOnly: true,
     emoji: '💰',
-    screenshot: '/projects/firstmicro-nano.svg',
+    screenshot: '/projects/FirstMicroLite.png',
     placeholderGrad: 'linear-gradient(135deg, #1a0a00 0%, #c2410c 60%, #fb923c 100%)',
     tags: ['Loan Management', 'UI/UX', 'User Stories', 'BPD'],
     description:
