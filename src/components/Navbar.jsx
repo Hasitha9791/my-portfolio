@@ -7,14 +7,14 @@ import logoLight from '../assets/logo-light.svg'
 import styles from './Navbar.module.css'
 
 const navLinks = [
-  { label: 'About',      to: 'hero' },
-  { label: 'Summary',    to: 'about' },
-  { label: 'Skills',     to: 'skills' },
-  { label: 'Projects',   to: 'projects' },
-  { label: 'Experience', to: 'experience' },
-  { label: 'Education',  to: 'education' },
-  { label: 'Personal',   to: 'personal' },
-  { label: 'Contact',    to: 'contact' },
+  { label: 'About',        to: 'hero' },
+  { label: 'Summary',      to: 'about' },
+  { label: 'Skills',       to: 'skills' },
+  { label: 'Projects',     to: 'projects' },
+  { label: 'Experience',   to: 'experience' },
+  { label: 'Endorsements', to: 'testimonials' },
+  { label: 'Education',    to: 'education' },
+  { label: 'Contact',      to: 'contact' },
 ]
 
 const listVariants = {

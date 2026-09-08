@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiAward, FiUsers, FiPackage, FiTrendingUp } from 'react-icons/fi'
+import { FiAward, FiUsers, FiPackage, FiTrendingUp, FiCreditCard, FiCpu, FiCloud, FiGitBranch, FiCheckSquare } from 'react-icons/fi'
 import styles from './About.module.css'
 
 const stats = [
@@ -10,12 +10,12 @@ const stats = [
 ]
 
 const highlights = [
-  { emoji: '🏦', text: 'Deep fintech domain expertise — core banking, leasing, BNPL, loan origination, digital wallets, and microfinance platforms' },
-  { emoji: '🤖', text: 'Pioneer in Vibe Coding — independently delivered Rabbit Desk (SaaS Help Desk) and iPayLater (BNPL platform) using AI-assisted development pipelines' },
-  { emoji: '☁️', text: 'Microsoft Azure certified (AZ-900 & AZ-104) — cloud operations, DevOps, App Services, SQL, monitoring, IAM, and CI/CD' },
-  { emoji: '🔗', text: 'Proven bridge between business requirements and technical delivery — translating market insights into BPDs, user stories, and software solutions' },
-  { emoji: '🚀', text: 'CEO & Founder of AxentraTech — Sri Lanka-based custom software company delivering web, mobile & enterprise solutions' },
-  { emoji: '📋', text: 'ISO 9001 & ISO 27001 compliant — experienced in audit support, incident management, RPA automation, and SLA-driven environments' },
+  { icon: <FiCreditCard size={18} color="#38bdf8" />, text: 'Deep fintech domain expertise — core banking, leasing, BNPL, loan origination, digital wallets, and microfinance platforms' },
+  { icon: <FiCpu size={18} color="#38bdf8" />, text: 'Pioneer in Vibe Coding — independently delivered Rabbit Desk (SaaS Help Desk) and iPayLater (BNPL platform) using AI-assisted development pipelines' },
+  { icon: <FiCloud size={18} color="#38bdf8" />, text: 'Microsoft Azure certified (AZ-900 & AZ-104) — cloud operations, DevOps, App Services, SQL, monitoring, IAM, and CI/CD' },
+  { icon: <FiGitBranch size={18} color="#38bdf8" />, text: 'Proven bridge between business requirements and technical delivery — translating market insights into BPDs, user stories, and software solutions' },
+  { icon: <FiTrendingUp size={18} color="#38bdf8" />, text: 'CEO & Founder of AxentraTech — Sri Lanka-based custom software company delivering web, mobile & enterprise solutions' },
+  { icon: <FiCheckSquare size={18} color="#38bdf8" />, text: 'ISO 9001 & ISO 27001 compliant — experienced in audit support, incident management, RPA automation, and SLA-driven environments' },
 ]
 
 export default function About() {
@@ -93,7 +93,7 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
             >
-              <span className={styles.highlightEmoji}>{h.emoji}</span>
+              <span className={styles.highlightIcon}>{h.icon}</span>
               <p className={styles.highlightText}>{h.text}</p>
             </motion.div>
           ))}

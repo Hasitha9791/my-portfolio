@@ -1,39 +1,40 @@
 import { motion } from 'framer-motion'
+import { FiAward, FiActivity, FiTarget, FiCpu, FiBookOpen, FiTrendingUp } from 'react-icons/fi'
 import styles from './Personal.module.css'
 
 const items = [
   {
-    emoji: '🏫',
+    icon: <FiAward size={22} color="#38bdf8" />,
     title: 'Deputy Head Prefect',
     subtitle: 'Badulla Central College',
     desc: 'Elected Deputy Head Prefect — led school-wide initiatives, managed student discipline, and represented the student body at official functions. Developed early leadership, public speaking, and team coordination skills.',
   },
   {
-    emoji: '🏉',
+    icon: <FiActivity size={22} color="#38bdf8" />,
     title: 'Rugby Player',
     subtitle: 'School Rugby Team',
     desc: 'Active rugby player throughout school years — built resilience, teamwork under pressure, and a competitive mindset that I carry into product ownership and team leadership today.',
   },
   {
-    emoji: '🏏',
+    icon: <FiTarget size={22} color="#38bdf8" />,
     title: 'Cricket Player',
     subtitle: 'School Cricket Team',
     desc: "Played competitive cricket at school level — a sport that taught patience, strategic thinking, and the importance of each team member's role in achieving a collective goal.",
   },
   {
-    emoji: '🤖',
+    icon: <FiCpu size={22} color="#38bdf8" />,
     title: 'AI & Vibe Coding Enthusiast',
     subtitle: 'Personal Interest',
     desc: 'Passionate about the frontier of AI-assisted development — using Cursor, GitHub Copilot, and agentic workflows to prototype and ship products faster than traditional development cycles.',
   },
   {
-    emoji: '📚',
+    icon: <FiBookOpen size={22} color="#38bdf8" />,
     title: 'Continuous Learner',
     subtitle: 'Self-Development',
     desc: 'Committed to lifelong learning — from Azure certifications to studying fintech regulations, product frameworks (JTBD, OKRs), and emerging technologies that shape the future of software.',
   },
   {
-    emoji: '🚀',
+    icon: <FiTrendingUp size={22} color="#38bdf8" />,
     title: 'Entrepreneur at Heart',
     subtitle: 'Founder – AxentraTech',
     desc: 'Built and launched AxentraTech from the ground up while maintaining a full-time career. Driven by the belief that great software can transform businesses and improve lives across Sri Lanka and beyond.',
@@ -64,7 +65,7 @@ export default function Personal() {
               custom={i}
             >
               <div className={styles.emojiWrap}>
-                <span className={styles.emoji}>{item.emoji}</span>
+                <span className={styles.icon}>{item.icon}</span>
               </div>
               <div className={styles.body}>
                 <h3 className={styles.title}>{item.title}</h3>

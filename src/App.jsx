@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import TrustBar from './components/TrustBar'
 import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
+import Testimonials from './components/Testimonials'
 import Education from './components/Education'
 import Personal from './components/Personal'
 import Contact from './components/Contact'
@@ -92,22 +94,23 @@ function BackToTop() {
         bottom: '2rem',
         right: '2rem',
         zIndex: 999,
-        width: '44px',
-        height: '44px',
+        width: '46px',
+        height: '46px',
         borderRadius: '50%',
-        border: '2px solid rgba(30,111,217,0.6)',
-        background: 'rgba(10,15,30,0.9)',
-        backdropFilter: 'blur(8px)',
+        border: '1px solid rgba(56, 189, 248, 0.4)',
+        background: 'rgba(17, 24, 39, 0.65)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
         color: '#38bdf8',
-        fontSize: '1.2rem',
+        fontSize: '1.25rem',
         cursor: 'pointer',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        boxShadow: '0 4px 20px rgba(30,111,217,0.35)',
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2)',
         opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0)' : 'translateY(16px)',
-        transition: 'opacity 0.3s ease, transform 0.3s ease',
+        transform: visible ? 'translateY(0) scale(1)' : 'translateY(16px) scale(0.9)',
+        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         pointerEvents: visible ? 'auto' : 'none',
       }}
     >
@@ -130,10 +133,12 @@ function App() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <TrustBar />
         <About />
         <Skills />
         <Projects />
         <Experience />
+        <Testimonials />
         <Education />
         <Personal />
         <Contact />

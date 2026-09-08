@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { FiExternalLink } from 'react-icons/fi'
+import { FiExternalLink, FiChevronUp, FiChevronDown } from 'react-icons/fi'
 import styles from './Experience.module.css'
 
 const jobs = [
@@ -26,23 +26,23 @@ const jobs = [
     period: 'Feb 2026 – Present',
     type: 'current',
     points: [
-      'Lead and manage a cross-functional team of 3 Software Engineers and 4 Support Team Members, overseeing day-to-day task assignment, workload planning, and team performance.',
+      'Lead and manage a cross-functional team of 3 Software Engineers and 4 Support Team Members, overseeing task assignments, workload planning, and team performance.',
       'Drive end-to-end product ownership for fintech software applications, including requirement gathering, sprint planning, backlog management, and release coordination.',
       'Conduct market analysis to identify new business opportunities and translate findings into actionable product requirements and development roadmaps.',
-      'Gather and document new requirements from stakeholders, writing detailed Business Process Documents (BPD), User Stories, and Functional Specifications for new SaaS-based fintech solutions.',
+      'Gather and document requirements from stakeholders, writing detailed Business Process Documents (BPD), User Stories, and Functional Specifications for new SaaS-based fintech solutions.',
       'Maintain deep finance domain knowledge across core banking operations including loan processing, customer onboarding, account management, leasing, and BNPL workflows.',
-      'Oversee New Development tasks in collaboration with the developer team, ensuring timely delivery, quality standards, and alignment with business objectives.',
-      'Manage full project lifecycle – from initiation and planning through to delivery, UAT, and production release across multiple concurrent fintech projects.',
-      'Responsible for Application QA – functional testing, defect tracking, regression testing, and post-release validation in collaboration with the development team.',
+      'Oversee new development tasks in collaboration with the developer team, ensuring timely delivery, quality standards, and alignment with business objectives.',
+      'Manage full project lifecycle from initiation and planning through to delivery, UAT, and production release across multiple concurrent fintech projects.',
+      'Responsible for application QA – functional testing, defect tracking, regression testing, and post-release validation in collaboration with the development team.',
       'Handle resource management – capacity planning, sprint allocation, and productivity optimization across engineering and support teams.',
-      'Design and document complete end-to-end business processes for new SaaS-based fintech software solutions covering operational, financial, and customer-facing workflows.',
-      'Actively developing new systems using Vibe Coding (AI-assisted development with GitHub Copilot Agent, Cursor IDE, Windsurf/Antigravity IDE, and VS Code).',
-      'Successfully completed full development of a SaaS-based Help Desk System (Rabbit Desk) using Vibe Coding – delivered end-to-end independently.',
-      'Currently developing a BNPL (Buy Now Pay Later) System (iPayLater) – including business logic, workflows, and system architecture.',
-      'Building a USA Client-based Customer Onboarding & Loan Origination System aligned with USA client compliance and lending workflows.',
+      'Design and document complete end-of-end business processes for new SaaS-based fintech software solutions covering operational, financial, and customer-facing workflows.',
+      'Actively develop new systems using Vibe Coding (AI-assisted development with GitHub Copilot Agent, Cursor IDE, Windsurf/Antigravity IDE, and VS Code).',
+      'Successfully completed full development of a SaaS-based Help Desk System using Vibe Coding, delivered end-to-end independently.',
+      'Currently developing a BNPL (Buy Now Pay Later) System, including business logic, workflows, and system architecture.',
+      'Building a USA client-based Customer Onboarding & Loan Origination System aligned with USA client compliance and lending workflows.',
       'Developing an HR Management System to streamline internal HR operations and employee management.',
-      'Developing commercial marketing websites for the Help Desk and BNPL systems for market-facing presence.',
-      'Leading the development of the Leasing System Frontend in collaboration with the engineering team.',
+      'Developing commercial websites for the Help Desk and BNPL systems to support market-facing presence.',
+      'Leading development of the Leasing System Frontend in collaboration with the engineering team.',
     ],
   },
   {
@@ -57,7 +57,7 @@ const jobs = [
       'Performed code performance monitoring and profiling using Visual Studio to identify bottlenecks and stability risks.',
       'Managed and tracked deliverables using Azure DevOps, including sprint planning, backlog refinement, and task coordination.',
       'Performed Azure monitoring, access control, and cost optimization, improving security posture and operational efficiency.',
-      'Actively contributed to Leasing frontend development, leveraging AI-assisted tools to accelerate UI development and validation.',
+      'Contributed to Leasing frontend development, leveraging AI-assisted tools to accelerate UI development and validation.',
       'Supported Azure SQL Server migration activities, including pre-migration checks, post-migration testing, and performance verification.',
       'Gathered requirements from stakeholders and prepared user stories, UI mockups, and business process documentation.',
       'Conducted functional, regression, and UAT testing, ensuring stable and high-quality releases.',
@@ -80,39 +80,54 @@ const jobs = [
   },
   {
     company: 'LB Finance PLC',
-    role: 'System Support Engineer',
+    role: 'System Support Engineer – Digital Channel Department',
     period: 'Sep 2021 – Oct 2023',
     type: 'past',
     points: [
-      'Provided production support for CIM Digital Wallet, Leasing, and Gold Loan systems.',
-      'Resolved live production issues using log analysis and SQL troubleshooting, ensuring minimal downtime.',
-      'Developed and monitored RPA automation workflows for SMS notifications, document generation, onboarding/offboarding, and CDM transaction recovery.',
-      'Supported CRIB API integration, ensuring data accuracy and regulatory compliance.',
-      'Conducted UAT testing and live deployments for mobile and web applications.',
-      'Analyzed transaction and customer data to support management reporting and operational decisions.',
-      'Supported CDM (Cash Deposit Machine) operations through database and log-level troubleshooting.',
+      'Delivered L2/L3 production support for the CIM Digital Banking Wallet, troubleshooting application and transaction issues to maintain platform stability and minimize customer impact.',
+      'Performed daily digital wallet transaction reconciliation, monitoring QR payment transactions processed through LankaPay and JustPay and reconciling them against the General Ledger in close coordination with the Finance Department.',
+      'Investigated and resolved banking application issues through log analysis and SQL Server Management Studio (SSMS) queries, validating transaction and system logs to identify root causes.',
+      'Collaborated closely with the developer team on issue resolution, defect fixes, and enhancement delivery for the CIM Digital Banking application and web platform.',
+      'Conducted UAT for the CIM Digital Banking app prior to release, and managed production release and deployment activities for both app and web platforms.',
+      'Participated in Disaster Recovery (DR) Drills to validate business continuity readiness for digital banking systems.',
+      'Liaised directly with third-party vendors to troubleshoot and resolve issues relating to the digital banking app and web platform.',
+      'Provided support for Cash Deposit Machines (CDM), analyzing transaction logs to identify messaging and processing issues, and coordinating with CDM vendors for resolution.',
+      'Supported RPA development initiatives by assisting the RPA developer with design, testing, and ongoing monitoring of automation workflows, including birthday SMS notifications, CDM transaction failure handling, employee onboarding/offboarding, reminder letter generation, and CEFT file upload processing.',
+      'Contributed to the CRIB API integration project, working with the developer team to troubleshoot and resolve CRIB-related data issues using SSMS and SQL queries.',
+      'Provided issue troubleshooting and resolution support for the Leasing and Gold Loan systems, and contributed to a new Gold Loan customer credit-rating integration development project.',
+      'Represented the IT department in coordination with the Finance team on card secret PIN generation tasks, ensuring secure and compliant execution.',
+      'Analyzed and reported on Digital Channel Department performance and progress to senior management, supporting data-driven decision-making.',
     ],
   },
   {
     company: 'Bimputh Finance PLC',
-    role: 'Executive – System Support',
+    role: 'Executive – Leasing',
     period: 'Sep 2018 – Oct 2021',
     type: 'past',
     points: [
-      'Supported Eclips Leasing System and microfinance platforms for daily operations.',
-      'Performed teller operations and assisted with loan disbursements, recoveries, and collections.',
-      'Conducted field visits to support customer onboarding and relationship management.',
+      'Worked in a customer-facing leasing role, driving growth of the branch leasing portfolio through proactive customer engagement, leasing product promotion, and relationship management.',
+      'Managed daily branch cashier operations, including petty cash handling, cash denomination management, and end-of-day cash balancing.',
+      'Performed General Ledger (GL) reconciliation for branch cash and leasing transactions, ensuring accuracy and compliance with internal financial controls.',
+      'Handled branch safe custody and cash management, maintaining security and audit compliance for physical cash holdings.',
+      'Operated and supported the branch mobile application used for customer transactions and leasing service delivery.',
+      'Coordinated with the Head Office IT and Operations teams on the integration of a new Leasing System, supporting rollout, testing, and branch-level adoption.',
+      'Supported the Eclips Leasing System and microfinance platforms for daily branch operations.',
+      'Assisted with loan disbursements, recoveries, and collections, and conducted field visits to support customer onboarding and relationship management.',
     ],
   },
   {
     company: '3K Holdings (Pvt) Ltd',
-    role: 'System Administrator',
+    role: 'Multi Duty Officer & ERP System Admin',
     period: 'Jul 2015 – Aug 2018',
     type: 'past',
     points: [
-      'Administered ERP systems and ensured smooth system operations and user support.',
-      'Prepared monthly sales, inventory, and reconciliation reports.',
-      'Supported finance operations including petty cash and payment processing.',
+      'Administered the company\'s ERP system, supporting invoicing, transaction processing, and day-to-day production support for branch users.',
+      'Managed ERP-based client onboarding, setting up new customer accounts and product configurations within the system.',
+      'Created and configured new products within the ERP system to support evolving business and sales requirements.',
+      'Processed Goods Received Notes (GRN) and credit note issuance, ensuring accurate inventory and financial records within the ERP platform.',
+      'Conducted pre-inspection checks and validations as part of ERP-driven operational workflows.',
+      'Handled branch-level finance operations, including petty cash management and payment processing.',
+      'Prepared monthly sales, inventory, and reconciliation reports to support management decision-making.',
     ],
   },
 ]
@@ -145,7 +160,11 @@ function JobCard({ job }) {
       </ul>
       {hasMore && (
         <button className={styles.toggle} onClick={() => setExpanded(!expanded)}>
-          {expanded ? '▲ Show less' : `▼ Show ${job.points.length - PREVIEW} more`}
+          {expanded ? (
+            <><FiChevronUp size={13} style={{ verticalAlign: 'middle', marginRight: 4 }} /> Show less</>
+          ) : (
+            <><FiChevronDown size={13} style={{ verticalAlign: 'middle', marginRight: 4 }} /> Show {job.points.length - PREVIEW} more</>
+          )}
         </button>
       )}
     </div>

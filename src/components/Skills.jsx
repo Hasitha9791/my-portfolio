@@ -1,50 +1,105 @@
 import { motion } from 'framer-motion'
+import { FiTool, FiTarget, FiDollarSign, FiCloud, FiCpu, FiCode, FiShield } from 'react-icons/fi'
 import styles from './Skills.module.css'
 
 /* Tech stack icons — from devicons CDN (no package needed) */
 const techStack = [
-  { name: 'Azure',       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' },
-  { name: 'React',       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-  { name: '.NET',        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg' },
-  { name: 'SQL Server',  src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg' },
-  { name: 'MySQL',       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
-  { name: 'JavaScript',  src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-  { name: 'GitHub',      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
-  { name: 'VS Code',     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
-  { name: 'Git',         src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+  { name: 'Azure',        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' },
+  { name: 'React',        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+  { name: '.NET Core',    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg' },
+  { name: 'SQL Server',   src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg' },
+  { name: 'MySQL',        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+  { name: 'JavaScript',   src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+  { name: 'GitHub',       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
+  { name: 'VS Code',      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
   { name: 'Azure DevOps', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-original.svg' },
+  { name: 'Git',          src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
 ]
 
 const skillGroups = [
   {
-    category: 'Product & Business',
-    icon: '🎯',
-    skills: ['Product Ownership', 'Requirement Gathering', 'User Stories & BPD', 'Sprint Planning', 'Backlog Management', 'Market Analysis', 'Stakeholder Engagement', 'UAT / QA Testing'],
+    category: 'Product Strategy & Ownership',
+    icon: <FiTarget size={22} />,
+    skills: [
+      { name: 'Product Roadmap & OKRs', badge: 'Strategic' },
+      { name: 'User Stories & BPD Docs', badge: 'Core' },
+      { name: 'Sprint Planning & Backlog' },
+      { name: 'Requirement Gathering' },
+      { name: 'Market & Competitor Analysis' },
+      { name: 'UAT & Release Sign-Off', badge: 'QA' },
+      { name: 'Stakeholder Alignment' },
+    ],
+    tools: ['Jira Software', 'Azure Boards', 'Confluence', 'Figma', 'Miro'],
   },
   {
-    category: 'Fintech Domain',
-    icon: '🏦',
-    skills: ['Core Banking Systems', 'Loan Origination', 'BNPL Platforms', 'Digital Wallets', 'Leasing Systems', 'Microfinance', 'CRIB API Integration', 'SaaS Fintech Products'],
+    category: 'Fintech & Regulatory Architecture',
+    icon: <FiDollarSign size={22} />,
+    skills: [
+      { name: 'Core Banking Workflows', badge: 'Fintech' },
+      { name: 'Loan Origination (LOS)', badge: 'Lending' },
+      { name: 'BNPL Multi-Tier Installments' },
+      { name: 'Digital Wallets & QR Payments' },
+      { name: 'Financial Leasing Systems' },
+      { name: 'CRIB API Integration', badge: 'RegTech' },
+      { name: 'Microfinance & Collections' },
+    ],
+    tools: ['CRIB API Gateway', 'Payment Webhooks', 'Navicat', 'Banking APIs'],
   },
   {
     category: 'Cloud & DevOps (Azure)',
-    icon: '☁️',
-    skills: ['AZ-900 Certified', 'AZ-104 Certified', 'Azure App Services', 'Azure SQL Database', 'Azure Blob Storage', 'Application Insights', 'Azure DevOps', 'CI/CD Pipelines'],
+    icon: <FiCloud size={22} />,
+    skills: [
+      { name: 'AZ-104: Azure Administrator', badge: 'Certified', isCert: true },
+      { name: 'AZ-900: Azure Fundamentals', badge: 'Certified', isCert: true },
+      { name: 'Azure App Services' },
+      { name: 'Azure SQL Database & Storage' },
+      { name: 'Application Insights' },
+      { name: 'CI/CD Pipelines' },
+      { name: 'IAM & Cost Governance' },
+    ],
+    tools: ['Microsoft Azure', 'Azure DevOps', 'GitHub Actions', 'Azure Monitor'],
   },
   {
-    category: 'AI & Vibe Coding',
-    icon: '🤖',
-    skills: ['GitHub Copilot Agent', 'Cursor IDE', 'Windsurf (Antigravity) IDE', 'VS Code', 'Vibe Coding', 'AI-Assisted Development', 'Agentic Workflows', 'Rapid Prototyping'],
+    category: 'AI & Vibe Coding Stack',
+    icon: <FiCpu size={22} />,
+    skills: [
+      { name: 'Vibe Coding Pipelines', badge: 'Pioneer' },
+      { name: 'Cursor IDE Workflows' },
+      { name: 'Windsurf (Antigravity) IDE' },
+      { name: 'GitHub Copilot Agent' },
+      { name: 'Agentic Code Scaffolding' },
+      { name: 'Rapid MVP Prototyping' },
+      { name: 'Automated Test Scaffolding' },
+    ],
+    tools: ['Cursor IDE', 'Windsurf / Antigravity', 'GitHub Copilot', 'VS Code', 'Claude / Gemini'],
   },
   {
-    category: 'Technical & Development',
-    icon: '💻',
-    skills: ['.NET App Debugging', 'Visual Studio IDE', 'React JS', 'SQL Server', 'MySQL', 'RPA Automation', 'Log Analysis', 'Performance Profiling'],
+    category: 'Technical Engineering & APIs',
+    icon: <FiCode size={22} />,
+    skills: [
+      { name: '.NET App Debugging', badge: 'L2/L3' },
+      { name: 'React JS & Next.js' },
+      { name: 'SQL Query Optimization' },
+      { name: 'REST API Integration' },
+      { name: 'RPA Automation Workflows' },
+      { name: 'Performance Profiling' },
+      { name: 'Database Migrations' },
+    ],
+    tools: ['Visual Studio 2022', 'SQL Server Profiler', 'Postman', 'Navicat', 'Node.js'],
   },
   {
-    category: 'Compliance & Quality',
-    icon: '🛡️',
-    skills: ['ISO 9001', 'ISO 27001', 'SLA Monitoring', 'Incident Management', 'Root Cause Analysis', 'Change Management', 'Regression Testing', 'ITIL Fundamentals'],
+    category: 'Compliance & Quality Assurance',
+    icon: <FiShield size={22} />,
+    skills: [
+      { name: 'ISO 9001 Compliance', badge: 'Audit' },
+      { name: 'ISO 27001 Security Controls', badge: 'Security' },
+      { name: 'SLA Monitoring & Reporting' },
+      { name: 'Incident & Change Management' },
+      { name: 'Root Cause Analysis (RCA)' },
+      { name: 'Regression & Stress Testing' },
+      { name: 'ITIL Best Practices' },
+    ],
+    tools: ['ITIL Service Desk', 'Event Viewer', 'Log Analytics', 'Audit Suites'],
   },
 ]
 
@@ -57,8 +112,8 @@ export default function Skills() {
   return (
     <section id="skills">
       <div className="container">
-        <p className="section-title">Key <span>Skills</span></p>
-        <p className="section-subtitle">Core competencies across product, fintech, cloud, and AI-assisted development</p>
+        <p className="section-title">Executive <span>Competencies</span></p>
+        <p className="section-subtitle">Core capabilities across product strategy, fintech architecture, cloud engineering, and AI pipelines</p>
 
         {/* ── Tech Stack Icons Row ── */}
         <motion.div
@@ -76,6 +131,7 @@ export default function Skills() {
           ))}
         </motion.div>
 
+        {/* ── Competency Cards Grid ── */}
         <div className={styles.grid}>
           {skillGroups.map((group, i) => (
             <motion.div
@@ -91,11 +147,36 @@ export default function Skills() {
                 <span className={styles.icon}>{group.icon}</span>
                 <h3>{group.category}</h3>
               </div>
+
+              {/* Skills Tags */}
               <div className={styles.tags}>
                 {group.skills.map(s => (
-                  <span key={s} className={styles.tag}>{s}</span>
+                  <span key={s.name} className={styles.tag}>
+                    <span>{s.name}</span>
+                    {s.badge && (
+                      <span className={`${styles.tagBadge} ${s.isCert ? styles.tagCert : ''}`}>
+                        {s.badge}
+                      </span>
+                    )}
+                  </span>
                 ))}
               </div>
+
+              {/* Primary Tools Strip */}
+              {group.tools && (
+                <div className={styles.toolsSection}>
+                  <span className={styles.toolsLabel}>
+                    <FiTool size={11} /> Primary Tools:
+                  </span>
+                  <div className={styles.toolsList}>
+                    {group.tools.map(tool => (
+                      <span key={tool} className={styles.toolChip}>
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
